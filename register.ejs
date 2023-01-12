@@ -1,0 +1,35 @@
+<!-- Wappler include head-page="layouts/userauth-web/register" fontawesome_5="cdn" bootstrap5="local" is="dmx-app" id="userauth-web/register" appConnect="local" components="{dmxBrowser:{},dmxValidator:{},dmxBootstrap5Modal:{},dmxNotifications:{},dmxBootbox5:{},dmxDatePicker:{},dmxMediumEditor:{},dmxScheduler:{},dmxStateManagement:{},dmxDropzone:{},dmxDownload:{},dmxFormatter:{},dmxSockets:{}}" jquery_slim_35="local" moment_2="local" -->
+<link rel="stylesheet" href="/css/userauth-web/register.css" />
+
+<meta name="ac:route" content="/userauth-web/register">
+<div id="browser" is="dmx-browser"></div>
+<dmx-notifications id="notify"></dmx-notifications>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&family=Roboto:wght@500&family=Roboto:wght@600&family=Arial:wght@400&display=swap" />
+
+<div id="register" class="_2_126 d-flex" fid="2:126">
+    <div id="_32_85" figma-name="Register_Box" class="_32_85" fid="32:85" layout="HORIZONTAL/VERTICAL/HUG/HUG">
+        <div id="_I32_85-11_4620" figma-name="Input_Fields_Box" class="_I32_85-11_4620" fid="I32:85;11:4620" layout="VERTICAL/VERTICAL/HUG/HUG">
+            <div id="_I32_85-11_4620-11_3829" figma-name="Input_Fields_Box_-_Base" class="_I32_85-11_4620-11_3829" fid="I32:85;11:4620;11:3829" layout="VERTICAL/VERTICAL/FIXED/HUG">
+                <dmx-value id="var_message" class="_I32_85-11_4620-11_3829-44_1122" fid="I32:85;11:4620;11:3829;44:1122"></dmx-value>
+                <span id="_I32_85-11_4620-11_3829-11_2113" figma-name="Title" class="_I32_85-11_4620-11_3829-11_2113" fid="I32:85;11:4620;11:3829;11:2113" layout="VERTICAL/None/FILL/FIXED">Register</span>
+                <form id="form" is="dmx-serverconnect-form" method="post" action="/api/userauth-api/account/register" dmx-on:invalid="var_message.setValue('Please check all fields')" dmx-on:error="var_message.setValue(lastError.response)" dmx-on:success="browser.goto('/userauth-web/register-success')" class="_I32_85-11_4620-11_3829-8_155" fid="I32:85;11:4620;11:3829;8:155" layout="VERTICAL/VERTICAL/FILL/HUG"><input id="input" class="_I32_85-11_4620-11_3829-61_4999 form-control" fid="I32:85;11:4620;11:3829;61:4999" layout="VERTICAL/None/HUG/HUG" name="input" type="hidden" placeholder="input [hidden|ignore]">
+                    <div id="_I32_85-11_4620-11_3829-9_237" figma-name="Input_field_with_label" class="_I32_85-11_4620-11_3829-9_237" fid="I32:85;11:4620;11:3829;9:237" layout="VERTICAL/VERTICAL/FILL/HUG"><span id="_I32_85-11_4620-11_3829-9_237-9_234" figma-name="Label" class="_I32_85-11_4620-11_3829-9_237-9_234" fid="I32:85;11:4620;11:3829;9:237;9:234" layout="VERTICAL/None/HUG/HUG">Email</span>
+                        <div id="_I32_85-11_4620-11_3829-9_237-9_235" figma-name="Input_field" class="_I32_85-11_4620-11_3829-9_237-9_235" fid="I32:85;11:4620;11:3829;9:237;9:235" layout="VERTICAL/HORIZONTAL/FILL/FIXED"><input id="username" class="_I32_85-11_4620-11_3829-9_237-9_235-9_232" fid="I32:85;11:4620;11:3829;9:237;9:235;9:232" layout="HORIZONTAL/None/FILL/HUG" name="username" type="text" placeholder="Enter your email">
+                        </div>
+                    </div>
+                    <div id="_I32_85-11_4620-11_3829-10_232" figma-name="Input_field_with_label" class="_I32_85-11_4620-11_3829-10_232" fid="I32:85;11:4620;11:3829;10:232" layout="VERTICAL/VERTICAL/FILL/HUG"><span id="_I32_85-11_4620-11_3829-10_232-9_234" figma-name="Label" class="_I32_85-11_4620-11_3829-10_232-9_234" fid="I32:85;11:4620;11:3829;10:232;9:234" layout="VERTICAL/None/HUG/HUG">Password</span>
+                        <div id="_I32_85-11_4620-11_3829-10_232-9_235" figma-name="Input_field" class="_I32_85-11_4620-11_3829-10_232-9_235" fid="I32:85;11:4620;11:3829;10:232;9:235" layout="VERTICAL/HORIZONTAL/FILL/FIXED"><input id="password" class="_I32_85-11_4620-11_3829-10_232-9_235-9_232" fid="I32:85;11:4620;11:3829;10:232;9:235;9:232" layout="HORIZONTAL/None/FILL/HUG" name="password" type="password" placeholder="Enter your password">
+                        </div>
+                    </div>
+                    <div id="Recaptcha" class="_I32_85-11_4620-11_3829-9_198" fid="I32:85;11:4620;11:3829;9:198" layout="VERTICAL/VERTICAL/HUG/HUG" is="dmx-if" dmx-bind:condition="<%=_('$_ENV.RECAPTCHA_SITE_KEY',locals)%>">
+                        <div id="Recaptcha_box" class="_I32_85-11_4620-11_3829-9_198-46_3593 g-recaptcha" fid="I32:85;11:4620;11:3829;9:198;46:3593" layout="VERTICAL/VERTICAL/FIXED/FIXED" data-sitekey="<%=_('$_ENV.RECAPTCHA_SITE_KEY',locals)%>"></div>
+                    </div>
+                    <div id="_I32_85-11_4620-11_3829-29_658" figma-name="Message_box" class="_I32_85-11_4620-11_3829-29_658" fid="I32:85;11:4620;11:3829;29:658" layout="VERTICAL/HORIZONTAL/FILL/FIXED">
+                        <header id="message" class="_I32_85-11_4620-11_3829-8_160" fid="I32:85;11:4620;11:3829;8:160" layout="HORIZONTAL/None/HUG/HUG" dmx-text="var_message.value">Message goes here</header>
+                    </div>
+                    <div id="submit" dmx-on:click="form.submit()" class="d-flex _I32_85-11_4620-11_3829-9_270 d-flex" fid="I32:85;11:4620;11:3829;9:270" layout="VERTICAL/HORIZONTAL/FILL/HUG"><span id="_I32_85-11_4620-11_3829-9_270-9_269" figma-name="Press" class="_I32_85-11_4620-11_3829-9_270-9_269" fid="I32:85;11:4620;11:3829;9:270;9:269" layout="HORIZONTAL/None/HUG/HUG">Submit</span></div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
