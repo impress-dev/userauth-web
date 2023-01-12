@@ -76,6 +76,24 @@ else
     git submodule add https://github.com/impress-dev/userauth-api.git "$1/app/api/userauth-api"
 fi
 
+if [ ! -d "$1/app/modules" ]
+then
+    mkdir "$1/app/modules"
+fi
+
+if [ ! -d "$1/app/modules/lib" ]
+then
+    mkdir "$1/app/modules/lib"
+fi
+
+if [ -d "$1/app/modules/lib/userauth-lib" ]
+then
+    echo "INFO: app/modules/lib/userauth-lib already exists so not re-adding as sub-module"
+else
+    echo "INFO: Adding userauth-lib"
+    git submodule add https://github.com/impress-dev/userauth-lib.git "$1/app/modules/lib/userauth-lib"
+fi
+
 if grep -Fq "userauth-web" "$1/app/config/routes.json"
 then
     echo "INFO: userauth-web already exists in routes.json so not re-adding routes"
@@ -87,11 +105,6 @@ else
     mv "$1/app/config/routes.json" "$ROUTES_BACKUP"
     echo "INFO: routes.json has been backed up to: $ROUTES_BACKUP"
     mv "$1/app/config/routes.json.new" "$1/app/config/routes.json"
-fi
-
-if [ ! -d "$1/app/modules" ]
-then
-    mkdir "$1/app/modules"
 fi
 
 if [ ! -f "$1/app/modules/global.json" ]
