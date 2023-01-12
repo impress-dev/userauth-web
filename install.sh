@@ -42,6 +42,8 @@ then
     exit 1
 fi
 
+echo "Wappler project directory: $1"
+
 if [ -d "$1/views/userauth-web" ]
 then
     echo "INFO: views/userauth-web already exists so not re-adding as sub-module"
