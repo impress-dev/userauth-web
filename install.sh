@@ -42,7 +42,7 @@ then
     exit 1
 fi
 
-echo "Wappler project directory: $1"
+cd "$1"
 
 if [ -d "$1/views/userauth-web" ]
 then
@@ -104,3 +104,5 @@ then
 else
     echo "WARNING: global.json already exists and so required ENV variables will need to be added manually"
 fi
+
+cd -
