@@ -23,15 +23,15 @@
       },
       {
         "type": "text",
-        "name": "EMAIL_SMTP__PASSWORD"
+        "name": "EMAIL_SMTP_PASSWORD"
       },
       {
         "type": "text",
-        "name": "EMAIL_SMTP__HOST"
+        "name": "EMAIL_SMTP_HOST"
       },
       {
         "type": "text",
-        "name": "EMAIL_SMTP__PORT"
+        "name": "EMAIL_SMTP_PORT"
       }
     ]
   },
