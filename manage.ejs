@@ -4,6 +4,21 @@
 <meta name="ac:route" content="/userauth/manage">
 <div id="browser" is="dmx-browser"></div>
 <dmx-notifications id="notify"></dmx-notifications>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&family=Roboto:wght@500&display=swap" />
 
-<div id="manage" class="_33_153 d-flex" fid="33:153"><span id="_123_1677" figma-name="The_intent_is_for_this_page_to_have_a_user_management_console" class="_123_1677" fid="123:1677" layout="VERTICAL/None/FILL/FIXED">The intent is for this page to have a user management console</span></div>
+<div id="manage" class="_33_153 d-flex" fid="33:153"><dmx-serverconnect id="info" url="/api/userauth/admin/info" class="_188_1525" fid="188:1525"></dmx-serverconnect>
+<dmx-serverconnect id="logout" url="/api/userauth/account/logout" noload dmx-on:success="browser.goto('/userauth/login')" class="_189_700" fid="189:700"></dmx-serverconnect>
+<span id="_123_1677" figma-name="This_is_a_placeholder_for_a_user_management_console" class="_123_1677" fid="123:1677" layout="VERTICAL/None/FILL/FIXED">This is a placeholder for a user management console</span><div id="_188_1522" figma-name="Users_metric" class="_188_1522" fid="188:1522" layout="VERTICAL/HORIZONTAL/FILL/HUG"><span id="_188_1521" figma-name="__Users_" class="_188_1521" fid="188:1521" layout="HORIZONTAL/None/HUG/HUG"># Users: </span><header id="user_count" class="_188_1523" fid="188:1523" layout="HORIZONTAL/None/HUG/HUG" dmx-text="info.data.users.count">user_count</header>
+</div>
+<div id="Button" dmx-on:click="logout.load({})" class="d-flex _189_698 d-flex" fid="189:698" layout="VERTICAL/HORIZONTAL/FIXED/HUG"><span id="_I189_698-9_269" figma-name="Press" class="_I189_698-9_269" fid="I189:698;9:269" layout="HORIZONTAL/None/HUG/HUG">LOGOUT</span></div>
+<div id="_191_738" figma-name="Links" class="_191_738" fid="191:738" layout="VERTICAL/VERTICAL/HUG/HUG"><div id="_191_739" figma-name="Row" class="_191_739" fid="191:739" layout="VERTICAL/HORIZONTAL/HUG/HUG"><div id="Database_Reset" figma-name="Database_Reset" class="_191_740 d-flex _191_740" fid="191:740" layout="HORIZONTAL/HORIZONTAL/FIXED/HUG" dmx-on:click="browser.goto('userauth/database-reset')"><span id="_I191_740-9_269" figma-name="Press" class="_I191_740-9_269" fid="I191:740;9:269" layout="HORIZONTAL/None/HUG/HUG">DATABASE RESET</span></div>
+<div id="Login" figma-name="Login" class="_191_742 d-flex _191_742" fid="191:742" layout="HORIZONTAL/HORIZONTAL/FIXED/HUG" dmx-on:click="browser.goto('userauth/login')"><span id="_I191_742-9_269" figma-name="Press" class="_I191_742-9_269" fid="I191:742;9:269" layout="HORIZONTAL/None/HUG/HUG">LOGIN</span></div>
+</div>
+<div id="_191_745" figma-name="Row" class="_191_745" fid="191:745" layout="VERTICAL/HORIZONTAL/HUG/HUG"><div id="Register" figma-name="Register" class="_191_750 d-flex _191_750" fid="191:750" layout="HORIZONTAL/HORIZONTAL/FIXED/HUG" dmx-on:click="browser.goto('userauth/register')"><span id="_I191_750-9_269" figma-name="Press" class="_I191_750-9_269" fid="I191:750;9:269" layout="HORIZONTAL/None/HUG/HUG">REGISTER</span></div>
+<div id="Password_Change" figma-name="Password_Change" class="_191_752 d-flex _191_752" fid="191:752" layout="HORIZONTAL/HORIZONTAL/FIXED/HUG" dmx-on:click="browser.goto('userauth/password-change')"><span id="_I191_752-9_269" figma-name="Press" class="_I191_752-9_269" fid="I191:752;9:269" layout="HORIZONTAL/None/HUG/HUG">PASSWORD CHANGE</span></div>
+</div>
+<div id="_191_754" figma-name="Row" class="_191_754" fid="191:754" layout="VERTICAL/HORIZONTAL/HUG/HUG"><div id="Password_Reset_Request" figma-name="Password_Reset_Request" class="_191_759 d-flex _191_759" fid="191:759" layout="HORIZONTAL/HORIZONTAL/FIXED/HUG" dmx-on:click="browser.goto('userauth/password-reset-request')"><span id="_I191_759-9_269" figma-name="Press" class="_I191_759-9_269" fid="I191:759;9:269" layout="HORIZONTAL/None/HUG/HUG">PASSWORD RESET REQUEST</span></div>
+<div id="Password_Reset" figma-name="Password_Reset" class="_191_761 d-flex _191_761" fid="191:761" layout="HORIZONTAL/HORIZONTAL/FIXED/HUG" dmx-on:click="browser.goto('userauth/password-reset')"><span id="_I191_761-9_269" figma-name="Press" class="_I191_761-9_269" fid="I191:761;9:269" layout="HORIZONTAL/None/HUG/HUG">PASSWORD RESET</span></div>
+</div>
+</div>
+</div>
