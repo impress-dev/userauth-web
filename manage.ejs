@@ -6,7 +6,7 @@
 <dmx-notifications id="notify"></dmx-notifications>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&family=Courier New:wght@700&family=Courier:wght@400&family=Roboto:wght@500&display=swap" />
 
-<div id="manage" class="_33_153 d-flex" fid="33:153"><dmx-serverconnect id="info" url="/api/userauth/admin/info" class="_188_1525" fid="188:1525"></dmx-serverconnect>
+<div id="manage" class="_33_153 d-flex" fid="33:153"><dmx-serverconnect id="info" url="/api/userauth/admin/info" class="_188_1525" fid="188:1525" sockets="true"></dmx-serverconnect>
 <dmx-serverconnect id="logout" url="/api/userauth/account/logout" noload dmx-on:success="browser.goto('/userauth/login')" class="_189_700" fid="189:700"></dmx-serverconnect>
 <div id="_214_787" figma-name="Frame_34" class="_214_787" fid="214:787" layout="VERTICAL/HORIZONTAL/FILL/HUG"><span id="_123_1677" figma-name="Admin_Console" class="_123_1677" fid="123:1677" layout="HORIZONTAL/None/HUG/HUG">Admin Console</span></div>
 <div id="_188_1522" figma-name="Users_metric" class="_188_1522" fid="188:1522" layout="VERTICAL/HORIZONTAL/FILL/HUG"><span id="_188_1521" figma-name="__Users_" class="_188_1521" fid="188:1521" layout="HORIZONTAL/None/HUG/HUG"># Users: </span><header id="user_count" class="_188_1523" fid="188:1523" layout="HORIZONTAL/None/HUG/HUG" dmx-text="info.data.users.count">user_count</header>
