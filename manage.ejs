@@ -6,29 +6,48 @@
 <dmx-notifications id="notify"></dmx-notifications>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&family=Courier New:wght@700&family=Courier:wght@400&family=Roboto:wght@500&display=swap" />
 
-<div id="manage" class="_33_153 d-flex" fid="33:153"><dmx-serverconnect id="info" url="/api/userauth/admin/info" class="_188_1525" fid="188:1525" sockets="true"></dmx-serverconnect>
+<div id="manage" class="_33_153 d-flex" fid="33:153">
+<dmx-serverconnect id="info" url="/api/userauth/admin/info" class="_188_1525" fid="188:1525" sockets="true"></dmx-serverconnect>
 <dmx-serverconnect id="logout" url="/api/userauth/account/logout" noload dmx-on:success="browser.goto('/userauth/login')" class="_189_700" fid="189:700"></dmx-serverconnect>
-<div id="_214_787" figma-name="Frame_34" class="_214_787" fid="214:787" layout="VERTICAL/HORIZONTAL/FILL/HUG"><span id="_123_1677" figma-name="Admin_Console" class="_123_1677" fid="123:1677" layout="HORIZONTAL/None/HUG/HUG">Admin Console</span></div>
-<div id="_188_1522" figma-name="Users_metric" class="_188_1522" fid="188:1522" layout="VERTICAL/HORIZONTAL/FILL/HUG"><span id="_188_1521" figma-name="__Users_" class="_188_1521" fid="188:1521" layout="HORIZONTAL/None/HUG/HUG"># Users: </span><header id="user_count" class="_188_1523" fid="188:1523" layout="HORIZONTAL/None/HUG/HUG" dmx-text="info.data.users.count">user_count</header>
+<div id="_214_787" figma-name="Frame_34" class="_214_787" fid="214:787" layout="VERTICAL/HORIZONTAL/FILL/HUG">
+<span id="_123_1677" figma-name="Admin_Console" class="_123_1677" fid="123:1677" layout="HORIZONTAL/None/HUG/HUG">Admin Console</span></div>
+<div id="_188_1522" figma-name="Users_metric" class="_188_1522" fid="188:1522" layout="VERTICAL/HORIZONTAL/FILL/HUG">
+<span id="_188_1521" figma-name="__Users_" class="_188_1521" fid="188:1521" layout="HORIZONTAL/None/HUG/HUG"># Users: </span><header id="user_count" class="_188_1523" fid="188:1523" layout="HORIZONTAL/None/HUG/HUG" dmx-text="info.data.users.count">user_count</header>
 </div>
-<div id="_213_783" figma-name="Users_metric" class="_213_783" fid="213:783" layout="VERTICAL/HORIZONTAL/FILL/HUG"><span id="_213_784" figma-name="__Unique_User_Logins__24_hours__" class="_213_784" fid="213:784" layout="HORIZONTAL/None/HUG/HUG"># Unique User Logins (24 hours): </span><header id="login_count" class="_213_785" fid="213:785" layout="HORIZONTAL/None/HUG/HUG" dmx-text="info.data.unique_user_logins_last_24_hours[0].count">login_count</header>
+<div id="_213_783" figma-name="Users_metric" class="_213_783" fid="213:783" layout="VERTICAL/HORIZONTAL/FILL/HUG">
+<span id="_213_784" figma-name="__Unique_User_Logins__24_hours__" class="_213_784" fid="213:784" layout="HORIZONTAL/None/HUG/HUG"># Unique User Logins (24 hours): </span><header id="login_count" class="_213_785" fid="213:785" layout="HORIZONTAL/None/HUG/HUG" dmx-text="info.data.unique_user_logins_last_24_hours[0].count">login_count</header>
 </div>
-<div id="_216_792" figma-name="Frame_35" class="_216_792" fid="216:792" layout="VERTICAL/VERTICAL/HUG/FIXED"><span id="_216_799" figma-name="Last_50_Activities_" class="_216_799" fid="216:799" layout="VERTICAL/None/HUG/HUG">Last 50 Activities:</span><div id="_219_801" figma-name="Frame_39" class="_219_801" fid="219:801" layout="VERTICAL/VERTICAL/FILL/FILL"><div id="_216_796" figma-name="Activity_Row" class="_216_796" fid="216:796" layout="VERTICAL/HORIZONTAL/HUG/HUG"><div id="_216_793" figma-name="Frame_36" class="_216_793" fid="216:793" layout="HORIZONTAL/HORIZONTAL/FIXED/HUG"><span id="_216_789" figma-name="Activity" class="_216_789" fid="216:789" layout="HORIZONTAL/None/HUG/HUG">Activity</span></div>
-<div id="_216_794" figma-name="Frame_37" class="_216_794" fid="216:794" layout="HORIZONTAL/HORIZONTAL/FIXED/HUG"><span id="_216_790" figma-name="Email" class="_216_790" fid="216:790" layout="HORIZONTAL/None/HUG/HUG">Email</span></div>
-<div id="_216_795" figma-name="Frame_38" class="_216_795" fid="216:795" layout="HORIZONTAL/HORIZONTAL/FIXED/HUG"><span id="_216_791" figma-name="When" class="_216_791" fid="216:791" layout="HORIZONTAL/None/HUG/HUG">When</span></div>
+<div id="_216_792" figma-name="Frame_35" class="_216_792" fid="216:792" layout="VERTICAL/VERTICAL/HUG/FIXED">
+<span id="_216_799" figma-name="Last_50_Activities_" class="_216_799" fid="216:799" layout="VERTICAL/None/HUG/HUG">Last 50 Activities:</span><div id="_219_801" figma-name="Frame_39" class="_219_801" fid="219:801" layout="VERTICAL/VERTICAL/FILL/FILL">
+<div id="_216_796" figma-name="Activity_Row" class="_216_796" fid="216:796" layout="VERTICAL/HORIZONTAL/HUG/HUG">
+<div id="_216_793" figma-name="Frame_36" class="_216_793" fid="216:793" layout="HORIZONTAL/HORIZONTAL/FIXED/HUG">
+<span id="_216_789" figma-name="Activity" class="_216_789" fid="216:789" layout="HORIZONTAL/None/HUG/HUG">Activity</span></div>
+<div id="_216_794" figma-name="Frame_37" class="_216_794" fid="216:794" layout="HORIZONTAL/HORIZONTAL/FIXED/HUG">
+<span id="_216_790" figma-name="Email" class="_216_790" fid="216:790" layout="HORIZONTAL/None/HUG/HUG">Email</span></div>
+<div id="_216_795" figma-name="Frame_38" class="_216_795" fid="216:795" layout="HORIZONTAL/HORIZONTAL/FIXED/HUG">
+<span id="_216_791" figma-name="When" class="_216_791" fid="216:791" layout="HORIZONTAL/None/HUG/HUG">When</span></div>
 </div>
-<div id="repeat_activity_row" class="_216_797" fid="216:797" layout="VERTICAL/VERTICAL/HUG/HUG" is="dmx-repeat" dmx-bind:repeat="info.data.last_10_activities"><div id="_219_802" figma-name="Activity_Row" class="_219_802" fid="219:802" layout="VERTICAL/HORIZONTAL/HUG/HUG"><div id="_219_803" figma-name="Frame_36" class="_219_803" fid="219:803" layout="HORIZONTAL/HORIZONTAL/FIXED/HUG"><header id="activity" class="_219_804" fid="219:804" layout="HORIZONTAL/None/HUG/HUG" dmx-text="activity">activity</header>
+<div id="repeat_activity_row" class="_216_797" fid="216:797" layout="VERTICAL/VERTICAL/HUG/HUG" is="dmx-repeat" dmx-bind:repeat="info.data.last_10_activities">
+<div id="_219_802" figma-name="Activity_Row" class="_219_802" fid="219:802" layout="VERTICAL/HORIZONTAL/HUG/HUG">
+<div id="_219_803" figma-name="Frame_36" class="_219_803" fid="219:803" layout="HORIZONTAL/HORIZONTAL/FIXED/HUG">
+<header id="activity" class="_219_804" fid="219:804" layout="HORIZONTAL/None/HUG/HUG" dmx-text="activity">activity</header>
 </div>
-<div id="_219_805" figma-name="Frame_37" class="_219_805" fid="219:805" layout="HORIZONTAL/HORIZONTAL/FIXED/HUG"><header id="email" class="_219_806" fid="219:806" layout="HORIZONTAL/None/HUG/HUG" dmx-text="data">email</header>
+<div id="_219_805" figma-name="Frame_37" class="_219_805" fid="219:805" layout="HORIZONTAL/HORIZONTAL/FIXED/HUG">
+<header id="email" class="_219_806" fid="219:806" layout="HORIZONTAL/None/HUG/HUG" dmx-text="data">email</header>
 </div>
-<div id="_219_807" figma-name="Frame_38" class="_219_807" fid="219:807" layout="HORIZONTAL/HORIZONTAL/FIXED/HUG"><header id="when" class="_219_808" fid="219:808" layout="HORIZONTAL/None/HUG/HUG" dmx-text="created.formatDate('yyyy-mm-dd HH:mm:ss')">when</header>
+<div id="_219_807" figma-name="Frame_38" class="_219_807" fid="219:807" layout="HORIZONTAL/HORIZONTAL/FIXED/HUG">
+<header id="when" class="_219_808" fid="219:808" layout="HORIZONTAL/None/HUG/HUG" dmx-text="created.formatDate('yyyy-mm-dd HH:mm:ss')">when</header>
 </div>
 </div>
 </div>
 </div>
 </div>
-<div id="_214_786" figma-name="Frame_33" class="_214_786" fid="214:786" layout="VERTICAL/VERTICAL/HUG/HUG"><div id="Button" dmx-on:click="logout.load({})" class="d-flex _189_698 d-flex" fid="189:698" layout="VERTICAL/HORIZONTAL/FIXED/HUG"><span id="_I189_698-9_269" figma-name="Press" class="_I189_698-9_269" fid="I189:698;9:269" layout="HORIZONTAL/None/HUG/HUG">LOGOUT</span></div>
-<div id="Password_Change" figma-name="Password_Change" class="_191_752 d-flex _191_752" fid="191:752" layout="VERTICAL/HORIZONTAL/FIXED/HUG" dmx-on:click="browser.goto('userauth/password-change')"><span id="_I191_752-9_269" figma-name="Press" class="_I191_752-9_269" fid="I191:752;9:269" layout="HORIZONTAL/None/HUG/HUG">PASSWORD CHANGE</span></div>
-<div id="Database_Reset" figma-name="Database_Reset" class="_191_740 d-flex _191_740" fid="191:740" layout="VERTICAL/HORIZONTAL/FIXED/HUG" dmx-on:click="browser.goto('userauth/database-reset')"><span id="_I191_740-9_269" figma-name="Press" class="_I191_740-9_269" fid="I191:740;9:269" layout="HORIZONTAL/None/HUG/HUG">DATABASE RESET</span></div>
+<div id="_214_786" figma-name="Frame_33" class="_214_786" fid="214:786" layout="VERTICAL/VERTICAL/HUG/HUG">
+<div id="Button" dmx-on:click="logout.load({})" class="d-flex _189_698 d-flex" fid="189:698" layout="VERTICAL/HORIZONTAL/FIXED/HUG">
+<span id="_I189_698-9_269" figma-name="Press" class="_I189_698-9_269" fid="I189:698;9:269" layout="HORIZONTAL/None/HUG/HUG">LOGOUT</span></div>
+<div id="Password_Change" figma-name="Password_Change" class="_191_752 d-flex _191_752" fid="191:752" layout="VERTICAL/HORIZONTAL/FIXED/HUG" dmx-on:click="browser.goto('userauth/password-change')">
+<span id="_I191_752-9_269" figma-name="Press" class="_I191_752-9_269" fid="I191:752;9:269" layout="HORIZONTAL/None/HUG/HUG">PASSWORD CHANGE</span></div>
+<div id="Database_Reset" figma-name="Database_Reset" class="_191_740 d-flex _191_740" fid="191:740" layout="VERTICAL/HORIZONTAL/FIXED/HUG" dmx-on:click="browser.goto('userauth/database-reset')">
+<span id="_I191_740-9_269" figma-name="Press" class="_I191_740-9_269" fid="I191:740;9:269" layout="HORIZONTAL/None/HUG/HUG">DATABASE RESET</span></div>
 </div>
 </div>
