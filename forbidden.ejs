@@ -8,8 +8,6 @@
 <dmx-serverconnect id="get_info" url="/api/userauth/account/info"></dmx-serverconnect>
 <dmx-value id="is_admin" dmx-bind:value="get_info.data.roles.values(`role`).contains('admin')"></dmx-value>
 <dmx-value id="is_user" dmx-bind:value="(get_info.data.identity?true:false)"></dmx-value>
-<link href="https://fonts.googleapis.com/css2?family=Henny Penny:wght@400&display=swap" rel="stylesheet" />
-
 <div id="forbidden" class="_33_147 d-flex" fid="33:147">
 <span id="_33_151" class="_33_151" fid="33:151" figma-name="You_have_entered_the_forbidden_zone_" layout="HORIZONTAL/None/FILL/HUG">You have entered the forbidden zone.</span>
 </div>

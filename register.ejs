@@ -8,8 +8,6 @@
 <dmx-serverconnect id="get_info" url="/api/userauth/account/info"></dmx-serverconnect>
 <dmx-value id="is_admin" dmx-bind:value="get_info.data.roles.values(`role`).contains('admin')"></dmx-value>
 <dmx-value id="is_user" dmx-bind:value="(get_info.data.identity?true:false)"></dmx-value>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&family=Roboto:wght@500&family=Arial:wght@400&display=swap" rel="stylesheet" />
-
 <div id="register" class="_2_126 d-flex" fid="2:126">
 <div id="_32_85" class="_32_85" fid="32:85" figma-name="Register_Box" layout="HORIZONTAL/VERTICAL/HUG/HUG">
 <div id="_I32_85-11_4620" class="_I32_85-11_4620" fid="I32:85;11:4620" figma-name="Input_Fields_Box" layout="VERTICAL/VERTICAL/HUG/HUG">

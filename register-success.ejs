@@ -8,8 +8,6 @@
 <dmx-serverconnect id="get_info" url="/api/userauth/account/info"></dmx-serverconnect>
 <dmx-value id="is_admin" dmx-bind:value="get_info.data.roles.values(`role`).contains('admin')"></dmx-value>
 <dmx-value id="is_user" dmx-bind:value="(get_info.data.identity?true:false)"></dmx-value>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet" />
-
 <div id="register-success" class="_42_1911 d-flex" fid="42:1911">
 <span id="_42_1912" class="_42_1912" fid="42:1912" figma-name="An_email_has_been_sent_to_you_containing_a_validation_link__Plea" layout="VERTICAL/None/FILL/HUG">An email has been sent to you containing a validation link.<br><br>Please check you junk folder if you are unable to find it.</span>
 </div>

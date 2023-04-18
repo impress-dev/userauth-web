@@ -8,8 +8,6 @@
 <dmx-serverconnect id="get_info" url="/api/userauth/account/info"></dmx-serverconnect>
 <dmx-value id="is_admin" dmx-bind:value="get_info.data.roles.values(`role`).contains('admin')"></dmx-value>
 <dmx-value id="is_user" dmx-bind:value="(get_info.data.identity?true:false)"></dmx-value>
-<link href="https://fonts.googleapis.com/css2?family=Arial:wght@400&display=swap" rel="stylesheet" />
-
 <div id="info" class="_33_148 d-flex" fid="33:148">
 <header id="This_is_a_generic_message_page" class="_33_152" dmx-text="query.message" fid="33:152" layout="HORIZONTAL/None/FILL/HUG">This is a generic message page</header>
 </div>

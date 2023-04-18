@@ -8,8 +8,6 @@
 <dmx-serverconnect id="get_info" url="/api/userauth/account/info"></dmx-serverconnect>
 <dmx-value id="is_admin" dmx-bind:value="get_info.data.roles.values(`role`).contains('admin')"></dmx-value>
 <dmx-value id="is_user" dmx-bind:value="(get_info.data.identity?true:false)"></dmx-value>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet" />
-
 <div id="database-reset-success" class="_33_146 d-flex" fid="33:146">
 <span id="_41_908" class="_41_908" fid="41:908" figma-name="The_database_has_successfully_been_reset_" layout="VERTICAL/None/FILL/HUG">The database has successfully been reset.</span>
 <header id="Click_here_to_login" class="_41_909" dmx-on:click="browser.goto('userauth/login')" fid="41:909" figma-name="Click_here_to_login" layout="VERTICAL/None/HUG/HUG">Click here to login</header>

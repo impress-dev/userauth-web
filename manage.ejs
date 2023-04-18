@@ -8,8 +8,6 @@
 <dmx-serverconnect id="get_info" url="/api/userauth/account/info"></dmx-serverconnect>
 <dmx-value id="is_admin" dmx-bind:value="get_info.data.roles.values(`role`).contains('admin')"></dmx-value>
 <dmx-value id="is_user" dmx-bind:value="(get_info.data.identity?true:false)"></dmx-value>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&family=Courier New:wght@700&family=Courier:wght@400&family=Roboto:wght@500&display=swap" rel="stylesheet" />
-
 <div id="manage" class="_33_153 d-flex" fid="33:153">
 <dmx-serverconnect id="info" class="_188_1525" fid="188:1525" sockets="true" url="/api/userauth/admin/info"></dmx-serverconnect>
 <dmx-serverconnect id="logout" class="_189_700" dmx-on:success="browser.goto('/userauth/login')" fid="189:700" noload url="/api/userauth/account/logout"></dmx-serverconnect>
