@@ -58,7 +58,7 @@
 </div>
 </div>
 </form>
-<div id="_I1_45-11_4152-11_3829-11_4675" class="_I1_45-11_4152-11_3829-11_4675" fid="I1:45;11:4152;11:3829;11:4675" figma-name="Register_footer" layout="VERTICAL/HORIZONTAL/FILL/HUG">
+<div id="Register_footer" class="_I1_45-11_4152-11_3829-11_4675" dmx-bind:condition="'<%=_('$_ENV.USERAUTH_DISABLE_REGISTRATIONS',locals)%>'.lowercase()!='true'" fid="I1:45;11:4152;11:3829;11:4675" is="dmx-if" layout="VERTICAL/HORIZONTAL/FILL/HUG">
 <span id="_I1_45-11_4152-11_3829-11_4676" class="_I1_45-11_4152-11_3829-11_4676" fid="I1:45;11:4152;11:3829;11:4676" figma-name="Don’t_have_an_account_" layout="HORIZONTAL/None/HUG/HUG">Don’t have an account?</span>
 <header id="Register" class="_I1_45-11_4152-11_3829-11_4677 d-flex _I1_45-11_4152-11_3829-11_4677" dmx-on:click="browser.goto('userauth/register')" fid="I1:45;11:4152;11:3829;11:4677" layout="HORIZONTAL/None/HUG/HUG">Register</header>
 </div>
