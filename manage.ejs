@@ -1,65 +1,167 @@
-<!-- Wappler include head-page="layouts/userauth/manage" fontawesome_5="cdn" bootstrap5="local" is="dmx-app" id="userauth/manage" appConnect="local" components="{dmxBrowser:{},dmxValidator:{},dmxBootstrap5Modal:{},dmxNotifications:{},dmxBootbox5:{},dmxDatePicker:{},dmxMediumEditor:{},dmxScheduler:{},dmxStateManagement:{},dmxDropzone:{},dmxDownload:{},dmxFormatter:{},dmxSockets:{},dmxStripe:{}}" jquery_slim_35="local" moment_2="local" -->
+<!-- Wappler include head-page="layouts/userauth/manage" fontawesome_5="cdn" bootstrap5="local" is="dmx-app" id="userauth/manage" appConnect="local" components="{dmxSockets:{},dmxNotifications:{},dmxBrowser:{},dmxStateManagement:{},dmxValidator:{},dmxBootstrap5Modal:{},dmxBootbox5:{},dmxFormatter:{}}" jquery_slim_35="local" moment_2="local" -->
 <link href="/css/userauth/manage.css" rel="stylesheet" />
-
 <meta content="/userauth/manage" name="ac:route">
-<div id="browser" is="dmx-browser"></div>
-<dmx-cookie-manager id="cookies"></dmx-cookie-manager>
-<dmx-notifications id="notify"></dmx-notifications>
-<dmx-serverconnect id="get_info" url="/api/userauth/account/info"></dmx-serverconnect>
-<dmx-value id="is_admin" dmx-bind:value="get_info.data.roles.values(`role`).contains('admin')"></dmx-value>
-<dmx-value id="is_user" dmx-bind:value="(get_info.data.identity?true:false)"></dmx-value>
-<div id="manage" class="_33_153 d-flex" fid="33:153">
-<dmx-serverconnect id="info" class="_188_1525" fid="188:1525" sockets="true" url="/api/userauth/admin/info"></dmx-serverconnect>
-<dmx-serverconnect id="logout" class="_189_700" dmx-on:success="browser.goto('/userauth/login')" fid="189:700" noload url="/api/userauth/account/logout"></dmx-serverconnect>
-<div id="_214_787" class="_214_787" fid="214:787" figma-name="Frame_34" layout="VERTICAL/HORIZONTAL/FILL/HUG">
-<span id="_123_1677" class="_123_1677" fid="123:1677" figma-name="Admin_Console" layout="HORIZONTAL/None/HUG/HUG">Admin Console</span>
+<div id="browser" is="dmx-browser">
 </div>
-<div id="_188_1522" class="_188_1522" fid="188:1522" figma-name="Users_metric" layout="VERTICAL/HORIZONTAL/FILL/HUG">
-<span id="_188_1521" class="_188_1521" fid="188:1521" figma-name="__Users_" layout="HORIZONTAL/None/HUG/HUG"># Users: </span>
-<header id="user_count" class="_188_1523" dmx-text="info.data.users.count" fid="188:1523" layout="HORIZONTAL/None/HUG/HUG">user_count</header>
-</div>
-<div id="_213_783" class="_213_783" fid="213:783" figma-name="Users_metric" layout="VERTICAL/HORIZONTAL/FILL/HUG">
-<span id="_213_784" class="_213_784" fid="213:784" figma-name="__Unique_User_Logins__24_hours__" layout="HORIZONTAL/None/HUG/HUG"># Unique User Logins (24 hours): </span>
-<header id="login_count" class="_213_785" dmx-text="info.data.unique_user_logins_last_24_hours[0].count" fid="213:785" layout="HORIZONTAL/None/HUG/HUG">login_count</header>
-</div>
-<div id="_216_792" class="_216_792" fid="216:792" figma-name="Frame_35" layout="VERTICAL/VERTICAL/HUG/FIXED">
-<span id="_216_799" class="_216_799" fid="216:799" figma-name="Last_50_Activities_" layout="VERTICAL/None/HUG/HUG">Last 50 Activities:</span>
-<div id="_219_801" class="_219_801" fid="219:801" figma-name="Frame_39" layout="VERTICAL/VERTICAL/FILL/FILL">
-<div id="_216_796" class="_216_796" fid="216:796" figma-name="Activity_Row" layout="VERTICAL/HORIZONTAL/HUG/HUG">
-<div id="_216_793" class="_216_793" fid="216:793" figma-name="Frame_36" layout="HORIZONTAL/HORIZONTAL/FIXED/HUG">
-<span id="_216_789" class="_216_789" fid="216:789" figma-name="Activity" layout="HORIZONTAL/None/HUG/HUG">Activity</span>
-</div>
-<div id="_216_794" class="_216_794" fid="216:794" figma-name="Frame_37" layout="HORIZONTAL/HORIZONTAL/FIXED/HUG">
-<span id="_216_790" class="_216_790" fid="216:790" figma-name="Email" layout="HORIZONTAL/None/HUG/HUG">Email</span>
-</div>
-<div id="_216_795" class="_216_795" fid="216:795" figma-name="Frame_38" layout="HORIZONTAL/HORIZONTAL/FIXED/HUG">
-<span id="_216_791" class="_216_791" fid="216:791" figma-name="When" layout="HORIZONTAL/None/HUG/HUG">When</span>
-</div>
-</div>
-<div id="repeat_activity_row" class="_216_797" dmx-bind:repeat="info.data.last_10_activities" fid="216:797" is="dmx-repeat" layout="VERTICAL/VERTICAL/HUG/HUG">
-<div id="_219_802" class="_219_802" fid="219:802" figma-name="Activity_Row" layout="VERTICAL/HORIZONTAL/HUG/HUG">
-<div id="_219_803" class="_219_803" fid="219:803" figma-name="Frame_36" layout="HORIZONTAL/HORIZONTAL/FIXED/HUG">
-<header id="activity" class="_219_804" dmx-text="activity" fid="219:804" layout="HORIZONTAL/None/HUG/HUG">activity</header>
-</div>
-<div id="_219_805" class="_219_805" fid="219:805" figma-name="Frame_37" layout="HORIZONTAL/HORIZONTAL/FIXED/HUG">
-<header id="email" class="_219_806" dmx-text="data" fid="219:806" layout="HORIZONTAL/None/HUG/HUG">email</header>
-</div>
-<div id="_219_807" class="_219_807" fid="219:807" figma-name="Frame_38" layout="HORIZONTAL/HORIZONTAL/FIXED/HUG">
-<header id="when" class="_219_808" dmx-text="created.formatDate('yyyy-MM-dd HH:mm:ss')" fid="219:808" layout="HORIZONTAL/None/HUG/HUG">when</header>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div id="_214_786" class="_214_786" fid="214:786" figma-name="Frame_33" layout="VERTICAL/VERTICAL/HUG/HUG">
-<div id="Button" class="d-flex _189_698 d-flex" dmx-on:click="logout.load({})" fid="189:698" layout="VERTICAL/HORIZONTAL/FIXED/HUG">
-<span id="_I189_698-9_269" class="_I189_698-9_269" fid="I189:698;9:269" figma-name="Press" layout="HORIZONTAL/None/HUG/HUG">LOGOUT</span>
-</div>
-<div id="Password_Change" class="_191_752 d-flex _191_752" dmx-on:click="browser.goto('userauth/password-change')" fid="191:752" figma-name="Password_Change" layout="VERTICAL/HORIZONTAL/FIXED/HUG">
-<span id="_I191_752-9_269" class="_I191_752-9_269" fid="I191:752;9:269" figma-name="Press" layout="HORIZONTAL/None/HUG/HUG">PASSWORD CHANGE</span>
-</div>
-<div id="Database_Reset" class="_191_740 d-flex _191_740" dmx-on:click="browser.goto('userauth/database-reset')" fid="191:740" figma-name="Database_Reset" layout="VERTICAL/HORIZONTAL/FIXED/HUG">
-<span id="_I191_740-9_269" class="_I191_740-9_269" fid="I191:740;9:269" figma-name="Press" layout="HORIZONTAL/None/HUG/HUG">DATABASE RESET</span>
-</div>
-</div>
+<dmx-cookie-manager id="cookies">
+</dmx-cookie-manager>
+<dmx-notifications id="notify" timeout="500">
+</dmx-notifications>
+<dmx-serverconnect id="get_info" url="/api/userauth/account/info">
+</dmx-serverconnect>
+<dmx-value dmx-bind:value="get_info.data.roles.values('role').contains('admin')" id="is_admin">
+</dmx-value>
+<dmx-value dmx-bind:value="(get_info.data.identity?true:false)" id="is_user">
+</dmx-value>
+<div class="d-flex" fid="611:1511" id="manage">
+    <dmx-serverconnect class="Headline_5" fid="188:1525" id="info" sockets="true" url="/api/userauth/admin/info">
+    </dmx-serverconnect>
+    <dmx-serverconnect class="Headline_5" dmx-on:success="browser.goto('/userauth/login')" fid="189:700" id="logout" noload="" url="/api/userauth/account/logout">
+    </dmx-serverconnect>
+    <div fid="214:787" fname="Frame 34" id="_214_787">
+        <span class="Headline_3" fid="123:1677" fname="Admin Console" id="_123_1677">
+            Admin Console
+        </span>
+    </div>
+    <div fid="617:795" fname="Spacer" id="_617_795">
+    </div>
+    <div fid="188:1522" fname="Users metric" id="_188_1522">
+        <span class="Headline_5" fid="188:1521" fname="# Users:" id="_188_1521">
+            # Users:
+        </span>
+        <header class="Headline_5" dmx-text="info.data.users.count" fid="188:1523" id="user_count">
+            user_count
+        </header>
+    </div>
+    <div fid="213:783" fname="Users metric" id="_213_783">
+        <span class="Headline_5" fid="213:784" fname="# Unique User Logins (24 hours):" id="_213_784">
+            # Unique User Logins (24 hours):
+        </span>
+        <header class="Headline_5" dmx-text="info.data.unique_user_logins_last_24_hours[0].count" fid="213:785" id="login_count">
+            login_count
+        </header>
+    </div>
+    <div fid="611:2308" fname="Users metric" id="_611_2308">
+        <span fid="611:2309" fname="# Users:" id="_611_2309">
+            # Users:
+        </span>
+        <header dmx-text="info.data.users.count" fid="611:2310" id="user_count_mobile">
+            user_count
+        </header>
+    </div>
+    <div fid="611:2190" fname="Users metric" id="_611_2190">
+        <span fid="611:2191" fname="# Unique User Logins (24 hours):" id="_611_2191">
+            # Unique User Logins (24 hours):
+        </span>
+        <header dmx-text="info.data.unique_user_logins_last_24_hours[0].count" fid="611:2192" id="login_count_mobile">
+            login_count
+        </header>
+    </div>
+    <div fid="216:792" fname="activites table" id="_216_792">
+        <span class="Headline_5" fid="216:799" fname="Last 50 Activities:" id="_216_799">
+            Last 50 Activities:
+        </span>
+        <div fid="219:801" fname="Frame 39" id="_219_801">
+            <div fid="216:796" fname="Activity Row" id="_216_796">
+                <div fid="216:793" fname="Frame 36" id="_216_793">
+                    <span fid="216:789" fname="Activity" id="_216_789">
+                        Activity
+                    </span>
+                </div>
+                <div fid="216:794" fname="Frame 37" id="_216_794">
+                    <span fid="216:790" fname="Email" id="_216_790">
+                        Email
+                    </span>
+                </div>
+                <div fid="216:795" fname="Frame 38" id="_216_795">
+                    <span fid="216:791" fname="When" id="_216_791">
+                        When
+                    </span>
+                </div>
+            </div>
+            <div dmx-bind:repeat="info.data.last_10_activities" fid="216:797" id="repeat_activity_row" is="dmx-repeat">
+                <div fid="219:802" fname="Activity Row" id="_219_802">
+                    <div fid="219:803" fname="Frame 36" id="_219_803">
+                        <header dmx-text="activity" fid="219:804" id="activity">
+                            activity
+                        </header>
+                    </div>
+                    <div fid="219:805" fname="Frame 37" id="_219_805">
+                        <header dmx-text="data" fid="219:806" id="email">
+                            email
+                        </header>
+                    </div>
+                    <div fid="219:807" fname="Frame 38" id="_219_807">
+                        <header dmx-text="created.formatDate('yyyy-MM-dd HH:mm:ss')" fid="219:808" id="when">
+                            when
+                        </header>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div fid="611:2010" fname="activities table" id="_611_2010">
+        <span class="Headline_5" fid="611:2011" fname="Last 50 Activities:" id="_611_2011">
+            Last 50 Activities:
+        </span>
+        <div fid="611:2012" fname="Frame 39" id="_611_2012">
+            <div fid="611:2013" fname="Activity Row" id="_611_2013">
+                <div fid="611:2014" fname="Frame 36" id="_611_2014">
+                    <span fid="611:2015" fname="Activity" id="_611_2015">
+                        Activity
+                    </span>
+                </div>
+                <div fid="611:2016" fname="Frame 37" id="_611_2016">
+                    <span fid="611:2017" fname="Email" id="_611_2017">
+                        Email
+                    </span>
+                </div>
+                <div fid="611:2018" fname="Frame 38" id="_611_2018">
+                    <span fid="611:2019" fname="When" id="_611_2019">
+                        When
+                    </span>
+                </div>
+            </div>
+            <div dmx-bind:repeat="info.data.last_10_activities" fid="611:2020" id="repeat_activity_row_mobile" is="dmx-repeat">
+                <div fid="611:2021" fname="Activity Row" id="_611_2021">
+                    <div fid="611:2022" fname="Frame 36" id="_611_2022">
+                        <header dmx-text="activity" fid="611:2023" id="activity_mobile">
+                            activity
+                        </header>
+                    </div>
+                    <div fid="611:2024" fname="Frame 37" id="_611_2024">
+                        <header dmx-text="data" fid="611:2025" id="email_mobile">
+                            email
+                        </header>
+                    </div>
+                    <div fid="611:2026" fname="Frame 38" id="_611_2026">
+                        <header dmx-text="created.formatDate('yyyy-MM-dd HH:mm:ss')" fid="611:2027" id="when_mobile">
+                            when
+                        </header>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div fid="214:786" fname="Frame 33" id="_214_786">
+        <div class="Secondary d-flex" dmx-on:click="logout.load({})" fid="189:698" id="Button">
+            <span class="Button" fid="I189:698;9:269" fname="Press" id="_I189_698-9_269">
+                LOGOUT
+            </span>
+        </div>
+        <a dmx-bind:href="'userauth/password-change'" fid="191:752_link" id="_191_752_link">
+            <div class="Secondary d-flex" fid="191:752" fname="Password Change" id="_191_752">
+                <span class="Button" fid="I191:752;9:269" fname="Press" id="_I191_752-9_269">
+                    PASSWORD CHANGE
+                </span>
+            </div>
+        </a>
+        <a dmx-bind:href="'userauth/database-reset'" fid="191:740_link" id="_191_740_link">
+            <div class="Secondary d-flex" fid="191:740" fname="Database Reset" id="_191_740">
+                <span class="Button" fid="I191:740;9:269" fname="Press" id="_I191_740-9_269">
+                    DATABASE RESET
+                </span>
+            </div>
+        </a>
+    </div>
 </div>

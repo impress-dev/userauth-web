@@ -1,13 +1,20 @@
-<!-- Wappler include head-page="layouts/userauth/forbidden" fontawesome_5="cdn" bootstrap5="local" is="dmx-app" id="userauth/forbidden" appConnect="local" components="{dmxBrowser:{},dmxValidator:{},dmxBootstrap5Modal:{},dmxNotifications:{},dmxBootbox5:{},dmxDatePicker:{},dmxMediumEditor:{},dmxScheduler:{},dmxStateManagement:{},dmxDropzone:{},dmxDownload:{},dmxFormatter:{},dmxSockets:{},dmxStripe:{}}" jquery_slim_35="local" moment_2="local" -->
+<!-- Wappler include head-page="layouts/userauth/forbidden" fontawesome_5="cdn" bootstrap5="local" is="dmx-app" id="userauth/forbidden" appConnect="local" components="{dmxNotifications:{},dmxBrowser:{},dmxStateManagement:{},dmxValidator:{},dmxBootstrap5Modal:{},dmxBootbox5:{},dmxFormatter:{}}" jquery_slim_35="local" moment_2="local" -->
 <link href="/css/userauth/forbidden.css" rel="stylesheet" />
-
 <meta content="/userauth/forbidden" name="ac:route">
-<div id="browser" is="dmx-browser"></div>
-<dmx-cookie-manager id="cookies"></dmx-cookie-manager>
-<dmx-notifications id="notify"></dmx-notifications>
-<dmx-serverconnect id="get_info" url="/api/userauth/account/info"></dmx-serverconnect>
-<dmx-value id="is_admin" dmx-bind:value="get_info.data.roles.values(`role`).contains('admin')"></dmx-value>
-<dmx-value id="is_user" dmx-bind:value="(get_info.data.identity?true:false)"></dmx-value>
-<div id="forbidden" class="_33_147 d-flex" fid="33:147">
-<span id="_33_151" class="_33_151" fid="33:151" figma-name="You_have_entered_the_forbidden_zone_" layout="HORIZONTAL/None/FILL/HUG">You have entered the forbidden zone.</span>
+<div id="browser" is="dmx-browser">
+</div>
+<dmx-cookie-manager id="cookies">
+</dmx-cookie-manager>
+<dmx-notifications id="notify" timeout="500">
+</dmx-notifications>
+<dmx-serverconnect id="get_info" url="/api/userauth/account/info">
+</dmx-serverconnect>
+<dmx-value dmx-bind:value="get_info.data.roles.values('role').contains('admin')" id="is_admin">
+</dmx-value>
+<dmx-value dmx-bind:value="(get_info.data.identity?true:false)" id="is_user">
+</dmx-value>
+<div class="d-flex" fid="33:147" id="forbidden">
+    <span fid="33:151" fname="You have entered the forbidden zone." id="_33_151">
+        You have entered the forbidden zone.
+    </span>
 </div>
