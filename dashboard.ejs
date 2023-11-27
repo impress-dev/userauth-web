@@ -1,0 +1,63 @@
+<!-- Wappler include head-page="layouts/userauth/dashboard" fontawesome_5="cdn" bootstrap5="local" is="dmx-app" id="userauth/dashboard" appConnect="local" components="{dmxSockets:{},dmxNotifications:{},dmxBrowser:{},dmxStateManagement:{},dmxValidator:{},dmxBootstrap5Modal:{},dmxBootbox5:{},dmxFormatter:{},dmxCharts:{}}" jquery_slim_35="local" moment_2="local" -->
+<link href="/css/userauth/dashboard.css" rel="stylesheet" />
+<meta content="/userauth/dashboard" name="ac:route">
+<div id="browser" is="dmx-browser">
+</div>
+<dmx-cookie-manager id="cookies">
+</dmx-cookie-manager>
+<dmx-notifications id="notify" timeout="500">
+</dmx-notifications>
+<dmx-serverconnect id="get_info" url="/api/userauth/account/info">
+</dmx-serverconnect>
+<dmx-value dmx-bind:value="get_info.data.roles.values('role').contains('admin')" id="is_admin">
+</dmx-value>
+<dmx-value dmx-bind:value="(get_info.data.identity?true:false)" id="is_user">
+</dmx-value>
+<div class="d-flex" fid="623:2504" id="dashboard">
+    <dmx-serverconnect fid="631:929" id="info" sockets="true" url="/api/userauth/admin/info">
+    </dmx-serverconnect>
+    <div fid="623:3109" fname="Frame 45" id="_623_3109">
+        <div fid="623:2669" fname="Frame 43" id="_623_2669">
+            <div fid="623:2670" fname="spacer" id="_623_2670">
+            </div>
+            <span fid="623:2671" fname="Dashboard" id="_623_2671">
+                Dashboard
+            </span>
+            <div fid="623:2672" fname="spacer" id="_623_2672">
+            </div>
+        </div>
+        <div fid="623:2673" fname="Frame 44" id="_623_2673">
+            <div fid="623:2674" fname="spacer" id="_623_2674">
+            </div>
+            <span fid="623:2675" fname="General user analytics" id="_623_2675">
+                General user analytics
+            </span>
+            <div fid="623:2676" fname="spacer" id="_623_2676">
+            </div>
+        </div>
+    </div>
+    <div fid="623:2478" fname="Frame 42" id="_623_2478">
+        <div fid="623:2479" fname="chart_card" id="_623_2479">
+            <div fid="I623:2479;623:1317" fname="Frame 7" id="_I623_2479-623_1317">
+                <div fid="I623:2479;623:1318" fname="Frame 2" id="_I623_2479-623_1318">
+                    <div fid="I623:2479;623:1319" fname="bar_chart" id="_I623_2479-623_1319">
+                        <div fid="I623:2479;623:1319;21:7521" fname="Vector" id="_I623_2479-623_1319-21_7521">
+                            <svg fill="none" id="_I623_2479-623_1319-21_7521_svg" preserveaspectratio="none" viewbox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 4.2H3V14H0V4.2ZM5.6 0H8.4V14H5.6V0ZM11.2 8H14V14H11.2V8Z" fill="#737279">
+                                </path>
+                            </svg>
+                        </div>
+                    </div>
+                    <span fid="I623:2479;623:1320" fname="Registrations per month" id="_I623_2479-623_1320">
+                        Registrations per month
+                    </span>
+                </div>
+            </div>
+            <span fid="I623:2479;623:1321" fname="Summary" id="_I623_2479-623_1321">
+                Number of registrations per month, since the beginning of tracking
+            </span>
+            <dmx-chart class="d-flex" colors="colors6" dataset-1="" dataset-1:value="count" dmx-bind:data="info.data.registrations_by_month" fid="I623:2479;623:1322" height="" id="~registered_users" labels="month" responsive="true" type="bar" width="">
+            </dmx-chart>
+        </div>
+    </div>
+</div>
