@@ -14,30 +14,30 @@
 <dmx-value dmx-bind:value="(get_info.data.identity?true:false)" id="is_user">
 </dmx-value>
 <div class="d-flex" fid="611:1511" id="manage">
-    <dmx-serverconnect class="Headline_5" fid="188:1525" id="info" sockets="true" url="/api/userauth/admin/info">
+    <dmx-serverconnect fid="188:1525" id="info" sockets="true" url="/api/userauth/admin/info">
     </dmx-serverconnect>
-    <dmx-serverconnect class="Headline_5" dmx-on:success="browser.goto('/userauth/login')" fid="189:700" id="logout" noload="" url="/api/userauth/account/logout">
+    <dmx-serverconnect dmx-on:success="browser.goto('/userauth/login')" fid="189:700" id="logout" noload="" url="/api/userauth/account/logout">
     </dmx-serverconnect>
     <div fid="214:787" fname="Frame 34" id="_214_787">
-        <span class="Headline_3" fid="123:1677" fname="Admin Console" id="_123_1677">
+        <span fid="123:1677" fname="Admin Console" id="_123_1677">
             Admin Console
         </span>
     </div>
     <div fid="617:795" fname="Spacer" id="_617_795">
     </div>
     <div fid="188:1522" fname="Users metric" id="_188_1522">
-        <span class="Headline_5" fid="188:1521" fname="# Users:" id="_188_1521">
+        <span fid="188:1521" fname="# Users:" id="_188_1521">
             # Users:
         </span>
-        <header class="Headline_5" dmx-text="info.data.users.count" fid="188:1523" id="user_count">
+        <header dmx-text="info.data.users.count" fid="188:1523" id="user_count">
             user_count
         </header>
     </div>
     <div fid="213:783" fname="Users metric" id="_213_783">
-        <span class="Headline_5" fid="213:784" fname="# Unique User Logins (24 hours):" id="_213_784">
+        <span fid="213:784" fname="# Unique User Logins (24 hours):" id="_213_784">
             # Unique User Logins (24 hours):
         </span>
-        <header class="Headline_5" dmx-text="info.data.unique_user_logins_last_24_hours[0].count" fid="213:785" id="login_count">
+        <header dmx-text="info.data.unique_user_logins_last_24_hours[0].count" fid="213:785" id="login_count">
             login_count
         </header>
     </div>
@@ -58,7 +58,7 @@
         </header>
     </div>
     <div fid="216:792" fname="activites table" id="_216_792">
-        <span class="Headline_5" fid="216:799" fname="Last 50 Activities:" id="_216_799">
+        <span fid="216:799" fname="Last 50 Activities:" id="_216_799">
             Last 50 Activities:
         </span>
         <div fid="219:801" fname="Frame 39" id="_219_801">
@@ -101,7 +101,7 @@
         </div>
     </div>
     <div fid="611:2010" fname="activities table" id="_611_2010">
-        <span class="Headline_5" fid="611:2011" fname="Last 50 Activities:" id="_611_2011">
+        <span fid="611:2011" fname="Last 50 Activities:" id="_611_2011">
             Last 50 Activities:
         </span>
         <div fid="611:2012" fname="Frame 39" id="_611_2012">
@@ -144,21 +144,21 @@
         </div>
     </div>
     <div fid="214:786" fname="Frame 33" id="_214_786">
-        <div class="Secondary d-flex" dmx-on:click="logout.load({})" fid="189:698" id="Button">
-            <span class="Button" fid="I189:698;9:269" fname="Press" id="_I189_698-9_269">
+        <div class="d-flex" dmx-on:click="logout.load({})" fid="189:698" id="Button">
+            <span fid="I189:698;9:269" fname="Press" id="_I189_698-9_269">
                 LOGOUT
             </span>
         </div>
         <a dmx-bind:href="'userauth/password-change'" fid="191:752_link" id="_191_752_link">
-            <div class="Secondary d-flex" fid="191:752" fname="Password Change" id="_191_752">
-                <span class="Button" fid="I191:752;9:269" fname="Press" id="_I191_752-9_269">
+            <div class="d-flex" fid="191:752" fname="Password Change" id="_191_752">
+                <span fid="I191:752;9:269" fname="Press" id="_I191_752-9_269">
                     PASSWORD CHANGE
                 </span>
             </div>
         </a>
         <a dmx-bind:href="'userauth/database-reset'" fid="191:740_link" id="_191_740_link">
-            <div class="Secondary d-flex" fid="191:740" fname="Database Reset" id="_191_740">
-                <span class="Button" fid="I191:740;9:269" fname="Press" id="_I191_740-9_269">
+            <div class="d-flex" fid="191:740" fname="Database Reset" id="_191_740">
+                <span fid="I191:740;9:269" fname="Press" id="_I191_740-9_269">
                     DATABASE RESET
                 </span>
             </div>

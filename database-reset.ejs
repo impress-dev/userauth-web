@@ -19,37 +19,37 @@
             <div fid="I41:778;11:4369;11:3883" fname="Input Fields Box - Base" id="_I41_778-11_4369-11_3883">
                 <dmx-value fid="I41:778;11:4369;11:3883;44:1122" id="var_error_message">
                 </dmx-value>
-                <span class="Headline_5" fid="I41:778;11:4369;11:3883;11:2113" fname="Title" id="_I41_778-11_4369-11_3883-11_2113">
+                <span fid="I41:778;11:4369;11:3883;11:2113" fname="Title" id="_I41_778-11_4369-11_3883-11_2113">
                     Database Reset
                 </span>
-                <span class="Headline_6" fid="I41:778;11:4369;11:3883;11:2114" fname="message" id="_I41_778-11_4369-11_3883-11_2114">
+                <span fid="I41:778;11:4369;11:3883;11:2114" fname="message" id="_I41_778-11_4369-11_3883-11_2114">
                     Submitting this form will reset all tables associated with user authentication and authorisation.
                 </span>
-                <form action="/api/&lt;% if($_ENV.USERAUTH_DATABASE_RESET_API){ %><%=_('$_ENV.USERAUTH_DATABASE_RESET_API',locals)%>&lt;% } else { %>userauth/database/reset&lt;% } %>" dmx-on:success="browser.goto('/userauth/database-reset-success')" dmx-on:unauthorized="browser.goto('/userauth/info?message=Steward password is incorrect')" fid="I41:778;11:4369;11:3883;8:155" id="form" is="dmx-serverconnect-form" method="post">
-                    <input class="Headline_6 form-control" fid="I41:778;11:4369;11:3883;61:4999" id="input" name="input" placeholder="input [hidden|ignore]" type="hidden">
+                <form action="/api/<% if($_ENV.USERAUTH_DATABASE_RESET_API){ %><%=_('$_ENV.USERAUTH_DATABASE_RESET_API',locals)%><% } else { %>userauth/database/reset<% } %>" dmx-on:success="browser.goto('/userauth/database-reset-success')" dmx-on:unauthorized="browser.goto('/userauth/info?message=Steward password is incorrect')" fid="I41:778;11:4369;11:3883;8:155" id="form" is="dmx-serverconnect-form" method="post">
+                    <input class="form-control" fid="I41:778;11:4369;11:3883;61:4999" id="input" name="input" placeholder="input [hidden|ignore]" type="hidden">
                     <div fid="I41:778;11:4369;11:3883;106:746" fname="Frame 31" id="_I41_778-11_4369-11_3883-106_746">
                         <div class="d-flex" dmx-hide="get_info.data.roles.values('role').contains('admin')" fid="I41:778;11:4369;11:3883;9:237" id="Admin_email">
-                            <span class="Subtitle_1" fid="I41:778;11:4369;11:3883;9:237;9:234" fname="Label" id="_I41_778-11_4369-11_3883-9_237-9_234">
+                            <span fid="I41:778;11:4369;11:3883;9:237;9:234" fname="Label" id="_I41_778-11_4369-11_3883-9_237-9_234">
                                 Admin email (to be created)
                             </span>
                             <div fid="I41:778;11:4369;11:3883;9:237;9:235" fname="Input field" id="_I41_778-11_4369-11_3883-9_237-9_235">
-                                <input class="Headline_6 Secondary_color" fid="I41:778;11:4369;11:3883;9:237;9:235;9:232" id="admin_username" name="admin_username" placeholder="Enter admin email" type="text">
+                                <input fid="I41:778;11:4369;11:3883;9:237;9:235;9:232" id="admin_username" name="admin_username" placeholder="Enter admin email" type="text">
                             </div>
                         </div>
                         <div class="d-flex" dmx-hide="get_info.data.roles.values('role').contains('admin')" fid="I41:778;11:4369;11:3883;10:232" id="Admin_password">
-                            <span class="Subtitle_1" fid="I41:778;11:4369;11:3883;10:232;9:234" fname="Label" id="_I41_778-11_4369-11_3883-10_232-9_234">
+                            <span fid="I41:778;11:4369;11:3883;10:232;9:234" fname="Label" id="_I41_778-11_4369-11_3883-10_232-9_234">
                                 Admin password (to be created)
                             </span>
                             <div fid="I41:778;11:4369;11:3883;10:232;9:235" fname="Input field" id="_I41_778-11_4369-11_3883-10_232-9_235">
-                                <input class="Headline_6 Secondary_color" fid="I41:778;11:4369;11:3883;10:232;9:235;9:232" id="admin_password" name="admin_password" placeholder="Enter admin password" type="password">
+                                <input fid="I41:778;11:4369;11:3883;10:232;9:235;9:232" id="admin_password" name="admin_password" placeholder="Enter admin password" type="password">
                             </div>
                         </div>
                         <div fid="I41:778;11:4369;11:3883;9:241" fname="Stweward password" id="_I41_778-11_4369-11_3883-9_241">
-                            <span class="Subtitle_1" fid="I41:778;11:4369;11:3883;9:241;9:234" fname="Label" id="_I41_778-11_4369-11_3883-9_241-9_234">
+                            <span fid="I41:778;11:4369;11:3883;9:241;9:234" fname="Label" id="_I41_778-11_4369-11_3883-9_241-9_234">
                                 Steward Password
                             </span>
                             <div fid="I41:778;11:4369;11:3883;9:241;9:235" fname="Input field" id="_I41_778-11_4369-11_3883-9_241-9_235">
-                                <input class="Headline_6 Secondary_color" dmx-on:keypress.enter="form.submit()" fid="I41:778;11:4369;11:3883;9:241;9:235;9:232" id="steward_password" name="steward_password" placeholder="Enter your steward password" type="password">
+                                <input dmx-on:keypress.enter="form.submit()" fid="I41:778;11:4369;11:3883;9:241;9:235;9:232" id="steward_password" name="steward_password" placeholder="Enter your steward password" type="password">
                             </div>
                         </div>
                     </div>
@@ -61,12 +61,12 @@
                     </div>
                     <div fid="I41:778;11:4369;11:3883;106:2233" fname="Frame 32" id="_I41_778-11_4369-11_3883-106_2233">
                         <div fid="I41:778;11:4369;11:3883;29:658" fname="Message box" id="_I41_778-11_4369-11_3883-29_658">
-                            <header class="Headline_6" dmx-text="var_error_message.value" fid="I41:778;11:4369;11:3883;8:160" id="error_message">
+                            <header dmx-text="var_error_message.value" fid="I41:778;11:4369;11:3883;8:160" id="error_message">
                                 Message goes here
                             </header>
                         </div>
-                        <div class="Secondary d-flex" dmx-on:click="form.submit()" fid="I41:778;11:4369;11:3883;9:270" id="submit">
-                            <span class="Button" fid="I41:778;11:4369;11:3883;9:270;9:269" fname="Press" id="_I41_778-11_4369-11_3883-9_270-9_269">
+                        <div class="d-flex" dmx-on:click="form.submit()" fid="I41:778;11:4369;11:3883;9:270" id="submit">
+                            <span fid="I41:778;11:4369;11:3883;9:270;9:269" fname="Press" id="_I41_778-11_4369-11_3883-9_270-9_269">
                                 SUBMIT
                             </span>
                         </div>
