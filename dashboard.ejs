@@ -71,40 +71,18 @@
                         </div>
                     </div>
                     <span fid="I651:1524;623:1320" fname="Registrations per month" id="_I651_1524-623_1320">
-                        Unique users per month
+                        Unique logins per month
                     </span>
                 </div>
             </div>
             <span fid="I651:1524;623:1321" fname="Summary" id="_I651_1524-623_1321">
-                Number of unique users per month, since the beginning of tracking
+                Number of unique user logins per month (minus registration logins), since the beginning of tracking
             </span>
-            <dmx-chart class="d-flex" colors="colors0" dataset-1="" dataset-1:value="count" dmx-bind:data="info.data.unique_users_by_month" fid="I651:1524;623:1322" height="" id="~unique_users" labels="month" responsive="true" type="bar" width="">
+            <dmx-chart class="d-flex" colors="colors0" dataset-1="" dataset-1:value="count" dmx-bind:data="info.data.unique_users_by_month_minus_registration_logins" fid="I651:1524;623:1322" height="" id="~unique_users" labels="month" responsive="true" type="bar" width="">
             </dmx-chart>
         </div>
     </div>
     <div fid="651:1608" fname="Frame 46" id="_651_1608">
-        <div fid="651:1609" fname="chart_card" id="_651_1609">
-            <div fid="I651:1609;623:1317" fname="Frame 7" id="_I651_1609-623_1317">
-                <div fid="I651:1609;623:1318" fname="Frame 2" id="_I651_1609-623_1318">
-                    <div fid="I651:1609;623:1319" fname="bar_chart" id="_I651_1609-623_1319">
-                        <div fid="I651:1609;623:1319;21:7521" fname="Vector" id="_I651_1609-623_1319-21_7521">
-                            <svg fill="none" id="_I651_1609-623_1319-21_7521_svg" preserveaspectratio="none" viewbox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0 4.2H3V14H0V4.2ZM5.6 0H8.4V14H5.6V0ZM11.2 8H14V14H11.2V8Z" fill="#737279">
-                                </path>
-                            </svg>
-                        </div>
-                    </div>
-                    <span fid="I651:1609;623:1320" fname="Registrations per month" id="_I651_1609-623_1320">
-                        Password reset requests per month
-                    </span>
-                </div>
-            </div>
-            <span fid="I651:1609;623:1321" fname="Summary" id="_I651_1609-623_1321">
-                Number of password reset requests per month, since the beginning of tracking
-            </span>
-            <dmx-chart class="d-flex" colors="colors9" dataset-1="" dataset-1:value="count" dmx-bind:data="info.data.password_reset_requests_by_month" fid="I651:1609;623:1322" height="" id="~password_reset_requests" labels="month" responsive="true" type="bar" width="">
-            </dmx-chart>
-        </div>
         <div fid="651:1610" fname="chart_card" id="_651_1610">
             <div fid="I651:1610;623:1317" fname="Frame 7" id="_I651_1610-623_1317">
                 <div fid="I651:1610;623:1318" fname="Frame 2" id="_I651_1610-623_1318">
@@ -124,7 +102,29 @@
             <span fid="I651:1610;623:1321" fname="Summary" id="_I651_1610-623_1321">
                 Number of incorrect passwords per month, since the beginning of tracking
             </span>
-            <dmx-chart class="d-flex" colors="colors1" dataset-1="" dataset-1:value="count" dmx-bind:data="info.data.incorrect_passwords_by_month" fid="I651:1610;623:1322" height="" id="~incorrect_passwords" labels="month" responsive="true" type="bar" width="">
+            <dmx-chart class="d-flex" colors="colors9" dataset-1="" dataset-1:value="count" dmx-bind:data="info.data.incorrect_passwords_by_month" fid="I651:1610;623:1322" height="" id="~incorrect_passwords" labels="month" responsive="true" type="bar" width="">
+            </dmx-chart>
+        </div>
+        <div fid="651:1609" fname="chart_card" id="_651_1609">
+            <div fid="I651:1609;623:1317" fname="Frame 7" id="_I651_1609-623_1317">
+                <div fid="I651:1609;623:1318" fname="Frame 2" id="_I651_1609-623_1318">
+                    <div fid="I651:1609;623:1319" fname="bar_chart" id="_I651_1609-623_1319">
+                        <div fid="I651:1609;623:1319;21:7521" fname="Vector" id="_I651_1609-623_1319-21_7521">
+                            <svg fill="none" id="_I651_1609-623_1319-21_7521_svg" preserveaspectratio="none" viewbox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 4.2H3V14H0V4.2ZM5.6 0H8.4V14H5.6V0ZM11.2 8H14V14H11.2V8Z" fill="#737279">
+                                </path>
+                            </svg>
+                        </div>
+                    </div>
+                    <span fid="I651:1609;623:1320" fname="Registrations per month" id="_I651_1609-623_1320">
+                        Password reset requests per month
+                    </span>
+                </div>
+            </div>
+            <span fid="I651:1609;623:1321" fname="Summary" id="_I651_1609-623_1321">
+                Number of password reset requests per month, since the beginning of tracking
+            </span>
+            <dmx-chart class="d-flex" colors="colors1" dataset-1="" dataset-1:value="count" dmx-bind:data="info.data.password_reset_requests_by_month" fid="I651:1609;623:1322" height="" id="~password_reset_requests" labels="month" responsive="true" type="bar" width="">
             </dmx-chart>
         </div>
     </div>
