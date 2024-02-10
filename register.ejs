@@ -45,7 +45,7 @@
                             </div>
                         </div>
                     </div>
-                    <div dmx-bind:condition="<%=_('$_ENV.RECAPTCHA_SITE_KEY',locals)%>" fid="I32:85;11:4620;11:3829;9:198" id="Recaptcha" is="dmx-if">
+                    <div dmx-bind:condition="'<%=_('$_ENV.RECAPTCHA_SITE_KEY',locals)%>'" fid="I32:85;11:4620;11:3829;9:198" id="Recaptcha" is="dmx-if">
                         <div fid="I32:85;11:4620;11:3829;9:198;107:2685" fname="Add top and bottom padding" id="_I32_85-11_4620-11_3829-9_198-107_2685">
                             <div class="g-recaptcha" data-sitekey="<%=_('$_ENV.RECAPTCHA_SITE_KEY',locals)%>" fid="I32:85;11:4620;11:3829;9:198;46:3593" id="Recaptcha_box">
                             </div>
